@@ -1,9 +1,12 @@
 public class Bouton_lumiere {
 	int num_bouton_lumiere;
-	boolean etat;
 	Lumière lumiere;
 	
-	void appuyerBoutonLumiere() {
-		etat = !etat;
+	public Bouton_lumiere(int num_bouton_lumiere, Lumière lumiere) {
+		this.num_bouton_lumiere = num_bouton_lumiere;
+		this.lumiere = lumiere;
 	}
-}
+
+	boolean appuyerBoutonLumiere() {
+		return lumiere.eteindreLumiere();
+	}
