@@ -1,8 +1,14 @@
 public class Porte {
-	int num_porte;
-	boolean etat;
+	private int num_porte;
+	private boolean etat;
 	
-	void fermerPorte() {
+	public Porte(int num_porte, boolean etat) {
+		this.num_porte = num_porte;
+		this.etat = etat;
+	}
+
+	boolean fermerPorte() {
 		etat = !etat;
+		return etat;
 	}
 }
